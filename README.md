@@ -6,7 +6,7 @@ This library provides a very simple debugging aid for Textual applications;
 designed as a very quick and easy "what widget is under the mouse and how is
 it styled" tool.
 
-**TO BE CLEAR:*** This isn't a full-blown DOM inspection tool; it's not even
+**TO BE CLEAR:** This isn't a full-blown DOM inspection tool; it's not even
 close. It's a quick and dirty but handy bit of code to quickly check what
 part of the terminal display belongs to what underlying widget and to see
 how it's styled.
@@ -49,6 +49,6 @@ development environment, do this:
 $ python -m textual_dominfo
 ```
 
-![The library in action](images/textual-dominfo.png)
+![The library in action](https://raw.githubusercontent.com/davep/textual-dominfo/main/images/textual-dominfo.png)
 
 [//]: # (README.md ends here)
