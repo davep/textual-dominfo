@@ -3,8 +3,8 @@
 ##############################################################################
 # Textual imports.
 from textual.app import App, ComposeResult
-from textual.containers import Horizontal, Vertical, Grid
-from textual.widgets import Button, RadioSet, Label
+from textual.containers import Grid, Horizontal, Vertical
+from textual.widgets import Button, Label, RadioSet
 
 ##############################################################################
 # Local imports.

@@ -1,5 +1,68 @@
-[build-system]
-requires = ["setuptools>=42", "wheel"]
-build-backend = "setuptools.build_meta"
+[project]
+name = "textual-dominfo"
+version = "0.1.0"
+description = "A simple tool for inspecting Textual widget styles"
+authors = [
+    { name = "Dave Pearson", email = "davep@davep.org" }
+]
+dependencies = [
+    "textual>=1.0.0",
+]
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "GNU General Public License v3 or later (GPLv3+)" }
+keywords = [
+    "terminal",
+    "library",
+    "widget",
+    "textual",
+    "debug",
+]
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Environment :: Console",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Programming Language :: Python :: 3.9",
+    "Topic :: Software Development :: Libraries",
+    "Topic :: Terminals",
+    "Typing :: Typed",
+]
 
-### pyproject.toml ends here
+[project.urls]
+Homepage = "https://github.com/davep/textual-dominfo"
+Repository = "https://github.com/davep/textual-dominfo"
+Documentation = "https://github.com/davep/textual-dominfo/blob/main/README.md"
+Source = "https://github.com/davep/textual-dominfo"
+Issues = "https://github.com/davep/textual-dominfo/issues"
+Discussions = "https://github.com/davep/textual-dominfo/discussions"
+
+[build-system]
+# https://github.com/astral-sh/rye/issues/1446
+requires = ["hatchling==1.26.3", "hatch-vcs"]
+# requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.rye]
+managed = true
+dev-dependencies = [
+    "codespell>=2.4.1",
+    "mypy>=1.16.1",
+    "pre-commit>=4.2.0",
+]
+
+[tool.hatch.metadata]
+allow-direct-references = true
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/textual_dominfo"]
+
+[tool.pyright]
+venvPath="."
+venv=".venv"
+exclude=[".venv"]
